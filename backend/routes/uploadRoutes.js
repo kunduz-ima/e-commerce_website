@@ -38,6 +38,10 @@ router.post("/", (req, res) => {
       if (err) {
         res.status(400).send({ message: err.message });
       } else if (req.file) {
+
+         // Берем путь и заменяем обратные слэши на прямые
+        const imagePath = req.file.path.replace(/\\/g, "/");
+        
         res.status(200).send({
           message: "Image uploaded successfully",
           image: `/${req.file.path}`,
