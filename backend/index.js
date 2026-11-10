@@ -23,7 +23,7 @@ const app = express();
 // <--- НАСТРОЙКА CORS
 app.use(
   cors({
-    origin: "https://watch-store-demo.vercel.app/", // URL с Vercel!
+    origin: "https://watch-store-demo.vercel.app", // URL с Vercel!
     credentials: true,
   }),
 );
